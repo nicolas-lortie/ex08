@@ -1,0 +1,6 @@
+pubspec.lock
+.DS_Store
+packages
+bin/.DS_Store
+doc/.DS_Store
+lib/.DS_Store
