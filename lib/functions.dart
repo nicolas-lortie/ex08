@@ -1,4 +1,4 @@
-library ex08;
+library functions;
 
 // Question 1.1: Sort the list of members of an association by the last name
 // Code inspiration from Stackoverflow
@@ -59,4 +59,3 @@ nameStartByC(var members, var letter) {
   }
   return ('');
 }
-
