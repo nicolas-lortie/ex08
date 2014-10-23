@@ -16,7 +16,11 @@ sortByLastName(var members, association) {
   for (var j in members) {
     if (j["TvShow"] == association) associationMembers.add(j);
   }
-  associationMembers.sort((a, b) => a["LastName"].compareTo(b["LastName"]));
+
+  associationMembers.sort((a, b) {
+    if (a["LastName"].compareTo(b["LastName"]) == 0) return a["FirstName"].compareTo(b["FirstName"]); else return a["LastName"].compareTo(b["LastName"]);
+  });
+
   for (var elmt in associationMembers) {
     print(elmt);
   }
@@ -24,26 +28,7 @@ sortByLastName(var members, association) {
 }
 
 
-
-// Question 1.2: Sort the list of members of an association by the first name
-
-
-sortByFirstName(var members, var association) {
-  List associationMembers = new List();
-
-  for (var j in members) {
-    if (j["TvShow"] == association) associationMembers.add(j);
-  }
-  associationMembers.sort((a, b) => a["FirstName"].compareTo(b["FirstName"]));
-  for (var elmt in associationMembers) {
-
-    print(elmt);
-  }
-  return ('');
-}
-
-
-// Question 1.3: Show members with last name starting by a given letter
+// Question 1.2: Show members with last name starting by a given letter
 // Added code so that members names print sorted by first name (same code from question 1.1)
 
 

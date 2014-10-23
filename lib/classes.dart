@@ -24,9 +24,9 @@ deleteMember(List members, var email) {
   List newList = new List();
 
   for (var j in members) {
-    if (j["e-mail"] != email) newList.add(j);
+    if (j["e-mail"] == email) newList.add(j);
   }
-  for (var elmt in newList) {
+  for (var elmt in members) {
     print(elmt);
   }
   return ('');

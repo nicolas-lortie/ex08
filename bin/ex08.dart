@@ -56,15 +56,11 @@ void main() {
 
 // Question 1.1
   var sp = ('South Park');
-  print('\nQuestion 1.1 members from $sp sorted by last name\n');
+  print('\nQuestion 1.1 members from $sp sorted by last name then by first name\n');
   print(sortByLastName(members, sp));
 
-  // Question 1.2
-  var bbt = ("Big Bang Theory");
-  print('\nQuestion 1.2 members from $bbt sorted by first name\n');
-  print(sortByFirstName(members, bbt));
 
-  // Question 1.3
+  // Question 1.2
   var letter = ('C');
   print('\nQuestion 1.3 members with last name starting by the letter $letter\n');
   print(nameStartByC(members, letter));
