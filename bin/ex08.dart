@@ -62,21 +62,23 @@ void main() {
 
   // Question 1.2
   var letter = ('C');
-  print('\nQuestion 1.3 members with last name starting by the letter $letter\n');
+  print('\nQuestion 1.2 members with last name starting by the letter $letter\n');
   print(nameStartByC(members, letter));
 
   // Question 2.1
-  var newTvShow = ('South Park');
-  var newFirstName = ('Butters');
-  var newLastName = ('Stotch');
-  var newEmail = ('bs@gmail.com');
+  var newCharacter1 = new editList('South Park', 'Butters', 'Stotch', 'bs@gmail.com');
   print('\nQuestion 2.1 example of adding a member\n');
-  print(addingMember(members, newTvShow, newFirstName, newLastName, newEmail));
+  print(editCharacter(newCharacter1, members));
 
   // Question 2.2
-  var emailToRemove = ('ec@gmail.com');
-  print('\nQuestion 2.2 removing the member with the following email adress: $emailToRemove\n');
-  print(deleteMember(members, emailToRemove));
+  var characterToRemove = new editList('South Park', 'Kenny', 'Mccormick', 'km@gmail.com');
+  print('\nQuestion 2.2 Removing a character from the list.\nSince a character can be in both lists of Tv Show the code\nlooks to erase a character that have both the good TvShow and E-mail\n');
+  print(deleteMember(characterToRemove, members));
+
+  // Question 2.3
+  var characterToEdit = new editList('South Park', 'Kyle', 'Broflovski', 'kylenewemail@gmail.com');
+  print('\nQuestion2.3 editing a characters information (see comment in classes.dart)\n');
+  print(editCharacter(characterToEdit, members));
 
 
 
