@@ -41,10 +41,8 @@ editCharacter(editList character, List members) {
     "LastName": character.LastName,
     "e-mail": character.Email
   });
-  for (var j in members) {
-    print(j);
-  }
-  return ("");
+
+  return members;
 
 }
 
@@ -56,12 +54,9 @@ deleteMember(editList character, List members) {
 
   members.removeWhere((j) => j['TvShow'] == character.TvShow && j['e-mail'] == character.Email);
 
-  for (var elmt in members) {
-    print(elmt);
-  }
-  return ('');
-}
 
+  return members;
+}
 
 
 

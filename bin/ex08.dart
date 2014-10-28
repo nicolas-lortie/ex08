@@ -58,33 +58,36 @@ void main() {
   var sp = ('South Park');
   print('\nQuestion 1.1 members from $sp sorted by last name then by first name\n');
   for (var y in sortByLastName(members, sp)) {
-     print(y);
-    }
-  
-
+    print(y);
+  }
 
   // Question 1.2
   var letter = ('C');
   print('\nQuestion 1.2 members with last name starting by the letter $letter\n');
   for (var y in nameStartByC(members, letter)) {
-      print(y);
-     }
-  
+    print(y);
+  }
 
   // Question 2.1
   var newCharacter1 = new editList('South Park', 'Butters', 'Stotch', 'bs@gmail.com');
   print('\nQuestion 2.1 example of adding a member\n');
-  print(editCharacter(newCharacter1, members));
+  for (var j in editCharacter(newCharacter1, members)) {
+    print(j);
+  }
 
   // Question 2.2
   var characterToRemove = new editList('South Park', 'Kenny', 'Mccormick', 'km@gmail.com');
   print('\nQuestion 2.2 Removing a character from the list.\nSince a character can be in both lists of Tv Show the code\nlooks to erase a character that have both the good TvShow and E-mail\n');
-  print(deleteMember(characterToRemove, members));
+  for (var elmt in deleteMember(characterToRemove, members)) {
+    print(elmt);
+  }
 
   // Question 2.3
   var characterToEdit = new editList('South Park', 'Kyle', 'Broflovski', 'kylenewemail@gmail.com');
   print('\nQuestion2.3 editing a characters information (see comment in classes.dart)\n');
-  print(editCharacter(characterToEdit, members));
+  for (var j in editCharacter(characterToEdit, members)) {
+    print(j);
+  }
 
 
 
