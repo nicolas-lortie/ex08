@@ -57,13 +57,19 @@ void main() {
 // Question 1.1
   var sp = ('South Park');
   print('\nQuestion 1.1 members from $sp sorted by last name then by first name\n');
-  print(sortByLastName(members, sp));
+  for (var y in sortByLastName(members, sp)) {
+     print(y);
+    }
+  
 
 
   // Question 1.2
   var letter = ('C');
   print('\nQuestion 1.2 members with last name starting by the letter $letter\n');
-  print(nameStartByC(members, letter));
+  for (var y in nameStartByC(members, letter)) {
+      print(y);
+     }
+  
 
   // Question 2.1
   var newCharacter1 = new editList('South Park', 'Butters', 'Stotch', 'bs@gmail.com');

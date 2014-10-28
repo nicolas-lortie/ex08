@@ -21,10 +21,10 @@ sortByLastName(var members, association) {
     if (a["LastName"].compareTo(b["LastName"]) == 0) return a["FirstName"].compareTo(b["FirstName"]); else return a["LastName"].compareTo(b["LastName"]);
   });
 
-  for (var elmt in associationMembers) {
-    print(elmt);
-  }
-  return ('');
+  //for (var elmt in associationMembers) {
+  //  print(elmt);
+ // }
+  return associationMembers;
 }
 
 
@@ -39,8 +39,6 @@ nameStartByC(var members, var letter) {
     if (j['LastName'][0] == letter) membersLetter.add(j);
   }
   membersLetter.sort((a, b) => a["FirstName"].compareTo(b["FirstName"]));
-  for (var elmt in membersLetter) {
-    print(elmt);
-  }
-  return ('');
+  
+  return membersLetter;
 }
