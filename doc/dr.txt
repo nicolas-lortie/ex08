@@ -1,3 +1,55 @@
 Nicolas Lortie Rochette
 
+ex08
+
+9/20
+
+-2
+corrections en retard
+
+-1
+import '../lib/functions.dart';
+import '../lib/classes.dart';
+utiliser le nom du paquet (package) et non une position relative
+
+8.1
+-1
+sortByLastName(var members, association) {
+-->
+sortByLastName(List members, String association) {
+
+-1
+  List members = [{
+      "TvShow": "South Park",
+      "FirstName": "Eric",
+      "LastName": "Cartman",
+      "e-mail": "ec@gmail.com"
+    }, {
+-->
+associations = [
+  {“name”: “IS”, “description”: “Information Systems”, “members”: 
+   [{“firstName”: “Dzenan”, “lastName”: “Ridjanovic”, “email”: “dr@gmail.com”},
+    {“firstName”: “Robert”, “lastName”: “Nelson”, “email”: “rn@gmail.com”}]},
+  {“name”: “CS”, “description”: “Computer Science”,  “members”: 
+   [{“firstName”: “David”, “lastName”: “Curtis”, “email”: “dc@gmail.com”}]}
+]
+
+Sort the list of members of a given association first by the last name, 
+THEN by the first name.
+-1 THEN
+
+8.2
+-1
+class editList {
+-->
+class Member {
+
+-1
+The same member may belong to different associations (TV shows)
+class editList {
+  var TvShow;
+  
+-3  
+pas un modèle de classe
+
 
