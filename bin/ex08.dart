@@ -1,6 +1,14 @@
-import '../lib/functions.dart';
-import '../lib/classes.dart';
-void main() {
+import 'package:ex08/functions.dart';
+
+main() {
+
+  List shows = [{
+      "name": "SP",
+      "description": "South Park"
+    }, {
+      "name": "BBT",
+      "description": "Big Bang Theory"
+    }];
 
   List members = [{
       "TvShow": "South Park",
@@ -68,28 +76,60 @@ void main() {
     print(y);
   }
 
-  // Question 2.1
-  var newCharacter1 = new editList('South Park', 'Butters', 'Stotch', 'bs@gmail.com');
-  print('\nQuestion 2.1 example of adding a member\n');
-  for (var j in editCharacter(newCharacter1, members)) {
-    print(j);
+  // Question 8.2
+
+// Adding Characters (members) and Shows (associations)
+
+  var allTvShow = new TvShow('', '', '');
+  var allCharacter = new Character('', '', '', '');
+
+  var show1 = new TvShow("AD", "American Dad", "A cartoon about a patriotic dad");
+  var show2 = new TvShow("FG", "Family Guy", "A satire about the middle class american family");
+  var character1 = new Character("AD", "Stan", "Smith", "sm@gmail.com");
+  var character2 = new Character("AD", "Roger", "Smith", "rs@gmail.com");
+  var character3 = new Character("FG", "Peter", "Griffin", "pg@gmail.com");
+  var character4 = new Character("FG", "Glen", "Quagmire", "gq@gmail.com");
+
+  allTvShow.addShow(show1);
+  allTvShow.addShow(show2);
+  allCharacter.addCharacter(character1);
+  allCharacter.addCharacter(character2);
+  allCharacter.addCharacter(character3);
+  allCharacter.addCharacter(character4);
+
+  print("\nClass model able to add, remove and update entities\n");
+
+  print('TvShows');
+  for (var association in allTvShow) {
+    print(association.toString());
+
   }
 
-  // Question 2.2
-  var characterToRemove = new editList('South Park', 'Kenny', 'Mccormick', 'km@gmail.com');
-  print('\nQuestion 2.2 Removing a character from the list.\nSince a character can be in both lists of Tv Show the code\nlooks to erase a character that have both the good TvShow and E-mail\n');
-  for (var elmt in deleteMember(characterToRemove, members)) {
-    print(elmt);
+  print('Characters');
+  for (var members in allCharacter) {
+    print(members.toString());
+
   }
+// Deleting a character
 
-  // Question 2.3
-  var characterToEdit = new editList('South Park', 'Kyle', 'Broflovski', 'kylenewemail@gmail.com');
-  print('\nQuestion2.3 editing a characters information (see comment in classes.dart)\n');
-  for (var j in editCharacter(characterToEdit, members)) {
-    print(j);
+  print('Example of deleting a character\n');
+
+  allCharacter.deleteCharacter('pg@gmail.com');
+
+  print('Characters after deleting Peter Griffin ');
+  for (var members in allCharacter) {
+    print(members.toString());
   }
+  // Updating the email of a character
 
+  print('example of updating an email\n');
+  
 
+  allCharacter.editCharacter("AD", "Stan", "Smith", "stanNewMail@gmail.com");
 
+  print('Characters with Stan Smith email updated');
+  for (var members in allCharacter) {
+    print(members.toString());
 
+  }
 }
