@@ -1,6 +1,39 @@
 Nicolas Lortie Rochette
 
+14/20
+
 ex08
+
+8.1
+
+-1
+sortByLastName(var members, association) {
+-->
+sortByLastName(List members, ? association) {
+se il vous plaît utiliser des types pour les paramètres de fonctions
+
+8.2
+
+-1
+class editList {
+  var TvShow;
+  var FirstName;
+-->
+class EditList {
+  var tvShow;
+  var firstName;
+voir https://www.dartlang.org/articles/style-guide/
+
+-2
+pas de classes pour les membres (Membre) et les associations (Association)
+une seule classe (editList)
+
+-2
+la seule classe ne est pas utilisé pour ajouter, supprimer et mettre à jour des données
+voir https://github.com/dzenanr/association
+pour un exemple d'un modèle de classes (classes avec relatiionships)
+
+---
 
 9/20
 
